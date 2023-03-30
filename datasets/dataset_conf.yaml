@@ -1,0 +1,22 @@
+# Dataset Path Configuration (DO NOT CHANGE)
+train_root:
+  - "./data/dataset1/data1/train/"
+  - "./data/dataset2/data2/train/"
+test_root:
+  - "./data/dataset1/data1/test/"
+  - "./data/dataset2/data2/test/"
+
+train_label:
+  - "./data/dataset1/data1/train_label.txt"
+  - "./data/dataset2/data2/train_label.txt"
+test_label:
+  - "./data/dataset1/data1/test_label.txt"
+  - "./data/dataset2/data2/test_label.txt"
+
+# Dataset Configuration
+num_classes:
+  - 10
+  - 50
+key_size:
+  - 4
+  - 8
