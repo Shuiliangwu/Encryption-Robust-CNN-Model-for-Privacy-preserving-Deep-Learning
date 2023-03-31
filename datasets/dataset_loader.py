@@ -2,6 +2,7 @@ import torchvision.transforms as transforms
 import torch
 import numpy as np
 from torch.utils.data import DataLoader, Dataset
+import torchvision.datasets as datasets
 import sys
 sys.path.append('..')
 
@@ -13,6 +14,7 @@ class MyDataSet(Dataset):
     transform = transforms.Compose(
         [transforms.ToTensor(),
          transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225))])
+
     def __init__(self, img_dir, label_dir):
         self.root = img_dir
         self.transform = self.transform
@@ -34,3 +36,19 @@ class MyDataSet(Dataset):
 
     def __len__(self):
         return len(self.labels)
+
+
+class ImageNet:
+    def __init__(self, root, split):
+        transform = transforms.Compose([
+            transforms.Resize(256),
+            transforms.CenterCrop(224),
+            transforms.ToTensor(),
+            # transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[
+            #                     0.229, 0.224, 0.225])
+        ])
+        self.dataset = datasets.ImageNet(
+            root, split=split, transform=transform)
+
+    def loader(self, batch_size):
+        return DataLoader(self.dataset, batch_size=batch_size, shuffle=True, num_workers=0)

@@ -13,10 +13,12 @@ test_label:
   - "./data/dataset1/data1/test_label.txt"
   - "./data/dataset2/data2/test_label.txt"
 
+ImageNet_root: "D:/HDD_Sharing"
+
 # Dataset Configuration
 num_classes:
   - 10
-  - 50
+  - 1000
 key_size:
   - 4
   - 8
