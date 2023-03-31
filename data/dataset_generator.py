@@ -121,6 +121,8 @@ class DatasetGenerator:
             image = image.resize((self.resolution, self.resolution))
             # encrypt and save the image to the trainset
             encrypted_image = self.encryptor.encrypt(image)
+            if encrypted_image.shape != (self.resolution, self.resolution, 3):
+                print(encrypted_image.shape)
             np.save(f'{self.dataset_path}/train/{i}.npy', encrypted_image)
             # write the label to the train_label.txt
             trainset_labels.write(f'{i}.npy {self.labels[ID-1]}\n')
@@ -135,6 +137,8 @@ class DatasetGenerator:
 
         print('Generating the testset...')
         # initialize the progress bar
+        bar = progressbar.ProgressBar(
+            widgets=widgets, maxval=len(self.testset_image_list))
         bar.start()
 
         for i in range(len(self.testset_image_list)):
