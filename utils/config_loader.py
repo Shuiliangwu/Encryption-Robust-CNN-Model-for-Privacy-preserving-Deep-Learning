@@ -30,13 +30,17 @@ class ConfigLoader:
 
     def generate_model_name(config):
         model_name = config['model_name']
-        if not config['cnn_pretrained']:
-            model_name += '_no_CNN_pretrained'
-        if config['adaptation']:
-            model_name += '_adaptation'
-            if config['adaptation_pretrained']:
-                model_name += '_pretrained'
-        model_name += '_dataset' + str(config['dataset_index'])
+        if config['pretrain']:
+            model_name += '_pretrain_CNN'
+            model_name += '_classes' + str(config['pretrain_classes'])
+        else:
+            if not config['cnn_pretrained']:
+                model_name += '_no_CNN_pretrained'
+            if config['adaptation']:
+                model_name += '_adaptation'
+                if config['adaptation_pretrained']:
+                    model_name += '_pretrained'
+            model_name += '_dataset' + str(config['dataset_index'])
         model_name += '_epoch' + str(config['num_epochs'])
         model_name += '_round' + str(config['training_round'])
         model_name += '_batch' + str(config['batch_size'])

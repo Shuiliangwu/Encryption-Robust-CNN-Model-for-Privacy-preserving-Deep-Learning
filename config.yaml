@@ -1,25 +1,30 @@
 #################### Dataset ####################
 # Dataset Index: 1, 2
-dataset_index: 2
+dataset_index: 3
 
 #################### Model ####################
 
 # Available Models: ResNet34, ResNet50, DesNet, ResNeXt50, ConvNeXt_Tiny, ConvNeXt_Small, ConvNeXt_Base, ConvNeXt_Large
-model_name: ConvNeXt_Base
+model_name: ResNet50
 # Adapatation: True, False
 adaptation: True
 adaptation_pretrained: True
 cnn_pretrained: False
-view_adaptated_image: False
-
+# Use the pretrained model trained by ourself
+self_pretrained: True
+view_adaptated_image: True
 
 #################### Training ####################
-test: False
+resume: True
+# Pretrain the CNN from scratch
+pretrain: False
+pretrain_classes: 600
+test: True
 # Training Parameters
-batch_size: 32
-num_epochs: 6
-learning_rate: 0.002
+batch_size: 64
+num_epochs: 15
+learning_rate: 0.004
 # Optimizer: Adam, SGD
 optimizer: SGD
 # Training Round: Reset the CNN and retain the adaptation network after each round
-training_round: 10
+training_round: 1

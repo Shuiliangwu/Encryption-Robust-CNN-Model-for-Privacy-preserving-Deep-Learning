@@ -8,7 +8,7 @@ from torchvision.utils import make_grid
 class AccuracyPlotter:
     def __init__(self, config, model_name):
         self.train_acc = np.loadtxt(f'./log/{model_name}/train_acc.txt')
-        self.val_acc = np.loadtxt(f'./log/{model_name}/test_acc.txt')
+        self.val_acc = np.loadtxt(f'./log/{model_name}/validation_acc.txt')
         self.epochs = range(1, config['num_epochs'] + 1)
         self.model_name = model_name
 
@@ -22,10 +22,11 @@ class AccuracyPlotter:
         if show:
             plt.show()
 
+
 class Imshow:
     # Show the an array of images in a grid no need to unnormalize
     def imshow(img1, img2, path=None):
-        if path is not None and os.path.exists('/'.join(path.split('/')[:-1]))==False:
+        if path is not None and os.path.exists('/'.join(path.split('/')[:-1])) == False:
             os.makedirs('/'.join(path.split('/')[:-1]))
 
         img = make_grid([img1, img2])

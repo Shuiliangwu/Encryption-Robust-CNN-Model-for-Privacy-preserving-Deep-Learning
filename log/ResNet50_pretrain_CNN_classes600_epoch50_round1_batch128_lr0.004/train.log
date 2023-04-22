@@ -1,0 +1,209 @@
+**************** CONFIGURATION **************** {'dataset_index': 3, 'model_name': 'ResNet50', 'adaptation': False, 'adaptation_pretrained': False, 'cnn_pretrained': False, 'view_adaptated_image': False, 'resume': True, 'pretrain': True, 'pretrain_classes': 600, 'test': True, 'batch_size': 128, 'num_epochs': 50, 'learning_rate': 0.004, 'optimizer': 'SGD', 'training_round': 1}**************** TIMESTAMP **************** 2023-04-04 01:16:21.163729**************** ROUND 1 ******************************** CONFIGURATION **************** {'dataset_index': 3, 'model_name': 'ResNet50', 'adaptation': False, 'adaptation_pretrained': False, 'cnn_pretrained': False, 'view_adaptated_image': False, 'resume': True, 'pretrain': True, 'pretrain_classes': 600, 'test': True, 'batch_size': 128, 'num_epochs': 50, 'learning_rate': 0.004, 'optimizer': 'SGD', 'training_round': 1}**************** TIMESTAMP **************** 2023-04-04 10:34:12.939236**************** ROUND 1 ******************************** CONFIGURATION **************** {'dataset_index': 3, 'model_name': 'ResNet50', 'adaptation': False, 'adaptation_pretrained': False, 'cnn_pretrained': False, 'view_adaptated_image': False, 'resume': True, 'pretrain': True, 'pretrain_classes': 600, 'test': True, 'batch_size': 128, 'num_epochs': 50, 'learning_rate': 0.004, 'optimizer': 'SGD', 'training_round': 1}**************** TIMESTAMP **************** 2023-04-04 13:24:42.916627**************** ROUND 1 ****************[1,   601] loss: 8.900 accuracy: 33.57%
+[1,  1202] loss: 7.912 accuracy: 39.29%
+[1,  1803] loss: 7.596 accuracy: 41.33%
+[1,  2404] loss: 7.402 accuracy: 42.54%
+[1,  3005] loss: 7.247 accuracy: 43.60%
+[1,  3606] loss: 7.085 accuracy: 44.88%
+[1,  4207] loss: 6.990 accuracy: 45.34%
+[1,  4808] loss: 6.892 accuracy: 46.01%
+[1,  5409] loss: 6.753 accuracy: 46.65%
+[1,  6010] loss: 6.702 accuracy: 47.21%
+Epoch 1: training accuracy = 47.90%
+********** VALIDATION **********
+Epoch 1: validation accuracy = 44.35%
+[2,   601] loss: 6.588 accuracy: 48.27%
+[2,  1202] loss: 6.327 accuracy: 49.85%
+[2,  1803] loss: 6.180 accuracy: 51.08%
+[2,  2404] loss: 6.090 accuracy: 51.50%
+[2,  3005] loss: 5.981 accuracy: 52.32%
+[2,  3606] loss: 5.948 accuracy: 52.72%
+[2,  4207] loss: 5.885 accuracy: 52.89%
+[2,  4808] loss: 5.889 accuracy: 53.25%
+[2,  5409] loss: 5.825 accuracy: 53.24%
+[2,  6010] loss: 5.773 accuracy: 54.13%
+Epoch 2: training accuracy = 53.99%
+********** VALIDATION **********
+Epoch 2: validation accuracy = 49.75%
+[3,   601] loss: 5.287 accuracy: 56.71%
+[3,  1202] loss: 5.299 accuracy: 56.91%
+[3,  1803] loss: 5.363 accuracy: 56.49%
+[3,  2404] loss: 5.327 accuracy: 56.88%
+[3,  3005] loss: 5.265 accuracy: 57.21%
+[3,  3606] loss: 5.263 accuracy: 57.25%
+[3,  4207] loss: 5.281 accuracy: 57.20%
+[3,  4808] loss: 5.232 accuracy: 57.64%
+[3,  5409] loss: 5.200 accuracy: 57.67%
+[3,  6010] loss: 5.212 accuracy: 57.59%
+Epoch 3: training accuracy = 59.24%
+********** VALIDATION **********
+Epoch 3: validation accuracy = 51.37%
+[4,   601] loss: 4.734 accuracy: 61.03%
+[4,  1202] loss: 4.722 accuracy: 60.81%
+[4,  1803] loss: 4.735 accuracy: 60.80%
+[4,  2404] loss: 4.714 accuracy: 60.99%
+[4,  3005] loss: 4.731 accuracy: 61.03%
+[4,  3606] loss: 4.734 accuracy: 60.69%
+[4,  4207] loss: 4.759 accuracy: 60.56%
+[4,  4808] loss: 4.737 accuracy: 60.98%
+[4,  5409] loss: 4.733 accuracy: 60.82%
+[4,  6010] loss: 4.763 accuracy: 60.83%
+Epoch 4: training accuracy = 60.08%
+********** VALIDATION **********
+Epoch 4: validation accuracy = 53.63%
+[5,   601] loss: 4.100 accuracy: 65.35%
+[5,  1202] loss: 4.211 accuracy: 64.45%
+[5,  1803] loss: 4.242 accuracy: 64.29%
+[5,  2404] loss: 4.251 accuracy: 64.17%
+[5,  3005] loss: 4.266 accuracy: 64.19%
+[5,  3606] loss: 4.268 accuracy: 64.04%
+[5,  4207] loss: 4.313 accuracy: 63.80%
+[5,  4808] loss: 4.330 accuracy: 63.89%
+[5,  5409] loss: 4.347 accuracy: 63.49%
+[5,  6010] loss: 4.312 accuracy: 63.92%
+Epoch 5: training accuracy = 65.34%
+********** VALIDATION **********
+Epoch 5: validation accuracy = 54.72%
+[6,   601] loss: 3.683 accuracy: 68.41%
+[6,  1202] loss: 3.746 accuracy: 67.77%
+[6,  1803] loss: 3.790 accuracy: 67.64%
+[6,  2404] loss: 3.798 accuracy: 67.36%
+[6,  3005] loss: 3.867 accuracy: 66.78%
+[6,  3606] loss: 3.882 accuracy: 66.64%
+[6,  4207] loss: 3.883 accuracy: 66.84%
+[6,  4808] loss: 3.923 accuracy: 66.48%
+[6,  5409] loss: 3.902 accuracy: 66.78%
+[6,  6010] loss: 3.908 accuracy: 66.60%
+Epoch 6: training accuracy = 65.13%
+********** VALIDATION **********
+Epoch 6: validation accuracy = 54.22%
+[7,   601] loss: 3.244 accuracy: 71.54%
+[7,  1202] loss: 3.321 accuracy: 70.85%
+[7,  1803] loss: 3.367 accuracy: 70.71%
+[7,  2404] loss: 3.432 accuracy: 69.93%
+[7,  3005] loss: 3.434 accuracy: 69.92%
+[7,  3606] loss: 3.472 accuracy: 69.76%
+[7,  4207] loss: 3.516 accuracy: 69.47%
+[7,  4808] loss: 3.529 accuracy: 69.26%
+[7,  5409] loss: 3.531 accuracy: 69.21%
+[7,  6010] loss: 3.531 accuracy: 69.48%
+Epoch 7: training accuracy = 71.43%
+********** VALIDATION **********
+Epoch 7: validation accuracy = 54.04%
+[8,   601] loss: 2.829 accuracy: 74.61%
+[8,  1202] loss: 2.930 accuracy: 73.64%
+[8,  1803] loss: 2.973 accuracy: 73.58%
+[8,  2404] loss: 3.023 accuracy: 72.82%
+[8,  3005] loss: 3.057 accuracy: 72.78%
+**************** CONFIGURATION **************** {'dataset_index': 3, 'model_name': 'ResNet50', 'adaptation': False, 'adaptation_pretrained': False, 'cnn_pretrained': False, 'view_adaptated_image': False, 'resume': True, 'pretrain': True, 'pretrain_classes': 600, 'test': True, 'batch_size': 128, 'num_epochs': 50, 'learning_rate': 0.004, 'optimizer': 'SGD', 'training_round': 1}**************** TIMESTAMP **************** 2023-04-05 12:57:42.431225**************** ROUND 1 ****************[1,   601] loss: 8.884 accuracy: 33.85%
+**************** CONFIGURATION **************** {'dataset_index': 3, 'model_name': 'ResNet50', 'adaptation': False, 'adaptation_pretrained': False, 'cnn_pretrained': False, 'view_adaptated_image': False, 'resume': True, 'pretrain': True, 'pretrain_classes': 600, 'test': True, 'batch_size': 128, 'num_epochs': 50, 'learning_rate': 0.004, 'optimizer': 'SGD', 'training_round': 1}**************** TIMESTAMP **************** 2023-04-05 13:18:16.324892**************** ROUND 1 ****************[1,   601] loss: 6.112 accuracy: 51.29%
+[1,  1202] loss: 5.557 accuracy: 54.64%
+[1,  1803] loss: 5.346 accuracy: 56.08%
+[1,  2404] loss: 5.255 accuracy: 56.49%
+[1,  3005] loss: 5.166 accuracy: 57.18%
+[1,  3606] loss: 5.093 accuracy: 57.75%
+[1,  4207] loss: 5.041 accuracy: 58.09%
+[1,  4808] loss: 4.955 accuracy: 58.87%
+[1,  5409] loss: 4.949 accuracy: 58.75%
+[1,  6010] loss: 4.934 accuracy: 58.72%
+Epoch 1: training accuracy = 61.26%
+********** VALIDATION **********
+Epoch 1: validation accuracy = 53.84%
+[2,   601] loss: 4.427 accuracy: 62.98%
+[2,  1202] loss: 4.206 accuracy: 64.63%
+[2,  1803] loss: 4.076 accuracy: 65.62%
+[2,  2404] loss: 4.030 accuracy: 65.78%
+[2,  3005] loss: 3.994 accuracy: 66.25%
+[2,  3606] loss: 4.026 accuracy: 65.85%
+[2,  4207] loss: 3.963 accuracy: 66.36%
+[2,  4808] loss: 3.921 accuracy: 66.77%
+[2,  5409] loss: 3.968 accuracy: 66.21%
+[2,  6010] loss: 3.937 accuracy: 66.51%
+Epoch 2: training accuracy = 68.42%
+********** VALIDATION **********
+Epoch 2: validation accuracy = 55.13%
+[3,   601] loss: 3.488 accuracy: 69.98%
+[3,  1202] loss: 3.533 accuracy: 69.55%
+[3,  1803] loss: 3.545 accuracy: 69.30%
+[3,  2404] loss: 3.572 accuracy: 68.96%
+[3,  3005] loss: 3.544 accuracy: 69.48%
+[3,  3606] loss: 3.517 accuracy: 69.61%
+[3,  4207] loss: 3.566 accuracy: 69.39%
+[3,  4808] loss: 3.577 accuracy: 69.12%
+[3,  5409] loss: 3.557 accuracy: 69.35%
+[3,  6010] loss: 3.572 accuracy: 69.29%
+Epoch 3: training accuracy = 69.26%
+********** VALIDATION **********
+Epoch 3: validation accuracy = 57.10%
+[4,   601] loss: 3.008 accuracy: 73.28%
+[4,  1202] loss: 3.052 accuracy: 73.14%
+[4,  1803] loss: 3.137 accuracy: 72.32%
+[4,  2404] loss: 3.214 accuracy: 71.97%
+[4,  3005] loss: 3.176 accuracy: 72.09%
+[4,  3606] loss: 3.238 accuracy: 71.44%
+[4,  4207] loss: 3.221 accuracy: 71.85%
+[4,  4808] loss: 3.263 accuracy: 71.34%
+[4,  5409] loss: 3.260 accuracy: 71.49%
+[4,  6010] loss: 3.241 accuracy: 71.76%
+Epoch 4: training accuracy = 71.37%
+********** VALIDATION **********
+Epoch 4: validation accuracy = 57.46%
+[5,   601] loss: 2.667 accuracy: 75.91%
+[5,  1202] loss: 2.726 accuracy: 75.48%
+[5,  1803] loss: 2.755 accuracy: 75.11%
+[5,  2404] loss: 2.826 accuracy: 74.56%
+[5,  3005] loss: 2.855 accuracy: 74.37%
+[5,  3606] loss: 2.888 accuracy: 74.23%
+[5,  4207] loss: 2.906 accuracy: 74.03%
+[5,  4808] loss: 2.953 accuracy: 73.73%
+[5,  5409] loss: 2.951 accuracy: 73.69%
+[5,  6010] loss: 2.942 accuracy: 73.77%
+Epoch 5: training accuracy = 74.11%
+********** VALIDATION **********
+Epoch 5: validation accuracy = 57.32%
+[6,   601] loss: 2.308 accuracy: 78.83%
+[6,  1202] loss: 2.407 accuracy: 77.91%
+[6,  1803] loss: 2.417 accuracy: 77.66%
+[6,  2404] loss: 2.502 accuracy: 77.03%
+[6,  3005] loss: 2.549 accuracy: 76.53%
+[6,  3606] loss: 2.576 accuracy: 76.46%
+[6,  4207] loss: 2.626 accuracy: 76.11%
+[6,  4808] loss: 2.609 accuracy: 76.08%
+[6,  5409] loss: 2.635 accuracy: 75.76%
+[6,  6010] loss: 2.679 accuracy: 75.59%
+Epoch 6: training accuracy = 75.79%
+********** VALIDATION **********
+Epoch 6: validation accuracy = 56.87%
+[7,   601] loss: 1.960 accuracy: 81.64%
+[7,  1202] loss: 2.085 accuracy: 80.39%
+[7,  1803] loss: 2.158 accuracy: 79.73%
+[7,  2404] loss: 2.187 accuracy: 79.39%
+[7,  3005] loss: 2.264 accuracy: 78.88%
+[7,  3606] loss: 2.288 accuracy: 78.72%
+[7,  4207] loss: 2.326 accuracy: 78.28%
+[7,  4808] loss: 2.349 accuracy: 77.92%
+[7,  5409] loss: 2.367 accuracy: 78.07%
+[7,  6010] loss: 2.375 accuracy: 77.99%
+Epoch 7: training accuracy = 76.42%
+********** VALIDATION **********
+Epoch 7: validation accuracy = 57.30%
+[8,   601] loss: 1.674 accuracy: 83.87%
+[8,  1202] loss: 1.771 accuracy: 82.93%
+[8,  1803] loss: 1.877 accuracy: 81.91%
+[8,  2404] loss: 1.915 accuracy: 81.65%
+[8,  3005] loss: 1.928 accuracy: 81.45%
+[8,  3606] loss: 2.010 accuracy: 80.68%
+[8,  4207] loss: 2.060 accuracy: 80.49%
+[8,  4808] loss: 2.045 accuracy: 80.47%
+[8,  5409] loss: 2.096 accuracy: 80.07%
+[8,  6010] loss: 2.119 accuracy: 79.78%
+Epoch 8: training accuracy = 79.79%
+********** VALIDATION **********
+Epoch 8: validation accuracy = 56.80%
+[9,   601] loss: 1.425 accuracy: 85.84%
+[9,  1202] loss: 1.565 accuracy: 84.51%
+[9,  1803] loss: 1.638 accuracy: 83.75%
+[9,  2404] loss: 1.652 accuracy: 83.78%
+[9,  3005] loss: 1.704 accuracy: 83.14%
+[9,  3606] loss: 1.763 accuracy: 82.81%
+[9,  4207] loss: 1.810 accuracy: 82.23%
+[9,  4808] loss: 1.832 accuracy: 82.08%

@@ -1,3 +1,5 @@
+from visualize.visualizer import Imshow
+from utils.config_loader import ConfigLoader
 from datetime import datetime
 import torch.optim as optim
 import torch.nn as nn
@@ -8,8 +10,7 @@ import os
 import shutil
 
 sys.path.append('..')
-from utils.config_loader import ConfigLoader
-from visualize.visualizer import Imshow
+
 
 class Trainer:
 
@@ -20,7 +21,7 @@ class Trainer:
         self.net = net.to(device)
         self.device = device
 
-    def train(self, round=1):
+    def train(self, round=1, resume=False):
         # Define the loss function and the optimizer
         criterion = nn.CrossEntropyLoss()
         if self.config['optimizer'] == 'SGD':
@@ -34,6 +35,12 @@ class Trainer:
 
         epochNum = self.config['num_epochs']
         model_name = ConfigLoader.generate_model_name(self.config)
+
+        # Load the optimizer state if resume is True and the optimizer file exists
+        if resume and os.path.exists(f'./models/pretrained/optimizer.pth'):
+            optimizer.load_state_dict(torch.load(
+                f'./models/pretrained/optimizer.pth'))
+            print('Optimizer loaded')
 
         # Creat the directory to store the log file if it does not exist
         if not os.path.exists(f'./log/{model_name}'):
@@ -92,8 +99,8 @@ class Trainer:
                 # print statistics
                 running_loss += loss.item()
                 train_acc = 100 * correct / total
-                # print every 10% of the training set
-                if i % (len(self.trainset_loader) // 10) == (len(self.trainset_loader) // 10) - 1:
+                # print every 1% of the training set
+                if i % (len(self.trainset_loader) // 100) == (len(self.trainset_loader) // 100) - 1:
                     print(
                         f'[{epoch + 1}, {i + 1:5d}] loss: {running_loss / 200:.3f} accuracy: {train_acc:.2f}%')
                     f.write(
@@ -103,8 +110,8 @@ class Trainer:
                     total = 0
                     # Show and save the image after the data augmentation
                     if self.config['view_adaptated_image']:
-                        Imshow.imshow(inputs[0], self.net.forward_adaptation(inputs[0]), f'./log/{model_name}/adapted_images/epoch{epoch + 1}_batch{i + 1}.png')
-                        
+                        Imshow.imshow(inputs[0], self.net.forward_adaptation(
+                            inputs[0]), f'./log/{model_name}/adapted_images/epoch{epoch + 1}_batch{i + 1}.png')
 
             # saving the training accuracy and its corresponding epoch
             print(f'Epoch {epoch + 1}: training accuracy = {train_acc:.2f}%')
@@ -145,7 +152,8 @@ class Trainer:
             # Save the model with the best validation accuracy
             if val_acc > best_acc:
                 best_acc = val_acc
-                torch.save(self.net.state_dict(), f'./log/{model_name}/best_model.pth')
+                torch.save(self.net.state_dict(),
+                           f'./log/{model_name}/best_model.pth')
 
         # torch.save(net.state_dict(), 'model.pth')  to delete
         print('********** Finished Training **********')
@@ -153,13 +161,18 @@ class Trainer:
         # Copy the model to the ./model/pretrained folder
         shutil.copy(f'./log/{model_name}/best_model.pth',
                     f'./models/pretrained/best_model.pth')
-        
+
+        # Save state dict of optimizer
+        torch.save(optimizer.state_dict(), f'./log/{model_name}/optimizer.pth')
+        torch.save(optimizer.state_dict(),
+                   f'./models/pretrained/optimizer.pth')
+
         # Close the log file
         f.close()
 
         # Save the training and validation accuracy to txt
         np.savetxt(f'./log/{model_name}/train_acc.txt', train_acc_list)
-        np.savetxt(f'./log/{model_name}/test_acc.txt', test_acc_list)
+        np.savetxt(f'./log/{model_name}/validation_acc.txt', test_acc_list)
 
         return best_acc
 

@@ -49,6 +49,10 @@ class ImageNet:
         ])
         self.dataset = datasets.ImageNet(
             root, split=split, transform=transform)
+    def make_subset(self, start, end):
+        indices_to_keep = [i for i, (_, class_idx) in enumerate(self.dataset.samples) if class_idx in range(start, end)]
+        self.dataset = torch.utils.data.Subset(self.dataset, indices_to_keep)
+        return self
 
     def loader(self, batch_size):
         return DataLoader(self.dataset, batch_size=batch_size, shuffle=True, num_workers=0)
