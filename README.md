@@ -5,15 +5,29 @@ A flaw was realized that pretrained ConvNeXt-Base has already seen and memorized
 
 
 Results are shown below. 
+
+
 Our Team as a Service Provider:
-	Best Validation Accuracy on Dataset1: 84.25%
-	Best Validation Accuracy on Dataset2: 96.72%
+
+
+Best Validation Accuracy on Dataset1: 84.25%
+
+
+Best Validation Accuracy on Dataset2: 96.72%
+
+
 ![Alt text](./results/model_comp_dataset1.png)
 ![Alt text](./results/model_comp_dataset2.png)
 
-Our Team as an eavesdropper :
-	Category Recognition on Dataset1: A Selected Few
-	Category Recognition on Dataset2: Almost 50
+Our Team as an eavesdropper:
+
+
+Category Recognition on Dataset1: A Selected Few
+
+
+Category Recognition on Dataset2: Almost 50
+
+
  ![Alt text](./results/decryption_dataset1.png)
 ![Alt text](./results/decryption_dataset2.png)
 
